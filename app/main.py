@@ -30,8 +30,6 @@ def clear_submit():
 st.set_page_config(page_title="GPT Smart Code Generation", page_icon="📖", layout="wide")
 st.header("GPT Smart Code Generation")
 
-sidebar()
-
 with st.expander("Instructions"):
     st.markdown("""
                 Enter instructions clearly and precisely, and as of now GPT is restricted to python and SQL language.
