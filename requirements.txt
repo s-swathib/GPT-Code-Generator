@@ -1,0 +1,6 @@
+streamlit
+faiss-cpu
+openai
+pillow
+tenacity
+sentence_transformers
