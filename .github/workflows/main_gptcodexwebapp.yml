@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'GPTCodexWebApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9895FD9DA5F5468F89F4529AFB7DE57D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A1AD58333FE346389B53E6F221FFB08C }}
