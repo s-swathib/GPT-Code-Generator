@@ -46,11 +46,15 @@ and birth date in string format as a parameter values
 and returns the full name, and the number of days from the birth date to today """
 , on_change=clear_submit)
 
-col1, col2 = st.columns([2,3])
+col1, col2, col3 = st.columns([1,2,3])
 with col1:
     generate = st.button('Generate Code')
 with col2:
     temp = st.slider('Temperature :thermometer:', min_value=0.0, max_value=1.0, step=0.1, value=0.5)
+with col3:
+    engine = st.selectbox(
+        "Select the engine:",
+        ("gpt-35-turbo", "code-davinci-002"))
 
 if generate or st.session_state.get("submit"):
     if not prompt_text:
@@ -61,7 +65,7 @@ if generate or st.session_state.get("submit"):
         placeholder = st.empty()
         
         try:
-            answer = get_answer(prompt_text, engine="gpt-35-turbo", temperature=temp, max_tokens=150)
+            answer = get_answer(prompt_text, engine=engine, temperature=temp, max_tokens=150)
             
             with placeholder.container():
                 st.markdown("#### Answer")
