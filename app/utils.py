@@ -15,7 +15,7 @@ def get_answer(engine: str,
 
     # Get the answer
     
-    if (deployment in ["gpt-35-turbo", "gpt-4", "gpt-4-32k"]) :
+    if (engine in ["gpt-35-turbo", "gpt-4", "code-davinci-002"]) :
         response = openai.Completion.create(engine=engine, prompt=prompt_text, top_p=1, frequency_penalty=0, presence_penalty=0,
                                             stop=["#",";"],temperature=temperature, max_tokens=max_tokens)
 
