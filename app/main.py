@@ -65,7 +65,7 @@ if generate or st.session_state.get("submit"):
         placeholder = st.empty()
         
         try:
-            answer = get_answer(engine=engine, prompt=prompt_text,  temperature=temp, max_tokens=150)
+            answer = get_answer(engine=engine, prompt=prompt_text,  temperature=temp, max_tokens=200)
             
             with placeholder.container():
                 st.markdown("#### Answer")
